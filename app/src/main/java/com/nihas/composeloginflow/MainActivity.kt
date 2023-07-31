@@ -5,15 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
-import com.nihas.composeloginflow.ui.LoginScreen
-import com.nihas.composeloginflow.ui.gradientBackground
+import com.nihas.composeloginflow.ui.view.LoginScreen
+import com.nihas.composeloginflow.ui.view.gradientBackground
 import com.nihas.composeloginflow.ui.theme.ComposeLoginFlowTheme
 import com.nihas.composeloginflow.ui.view.LandingPage
-import ru.beryukhov.coffeegram.animations.newSplashTransition
+import com.nihas.composeloginflow.animations.newSplashTransition
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

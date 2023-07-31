@@ -1,4 +1,4 @@
-package ru.beryukhov.coffeegram.animations
+package com.nihas.composeloginflow.animations
 
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.Spring

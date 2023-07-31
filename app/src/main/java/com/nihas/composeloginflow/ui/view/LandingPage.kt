@@ -12,7 +12,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.nihas.composeloginflow.R
-import com.nihas.composeloginflow.ui.gradientBackground
 
 
 @Composable

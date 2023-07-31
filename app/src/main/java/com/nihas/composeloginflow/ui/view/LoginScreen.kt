@@ -1,9 +1,20 @@
-package com.nihas.composeloginflow.ui
+package com.nihas.composeloginflow.ui.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Divider
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -16,14 +27,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nihas.composeloginflow.R
-import com.nihas.composeloginflow.ui.theme.Purple500
-import com.nihas.composeloginflow.ui.theme.Shapes
+import com.nihas.composeloginflow.ui.theme.Purple80
 import kotlin.math.*
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier){
     Column(
@@ -43,7 +53,10 @@ fun LoginScreen(modifier: Modifier = Modifier){
             modifier = Modifier.padding(horizontal = 20.dp), color= Color.White,fontSize = 16.sp)
 
         //CARDVIEW
-        Card(shape = Shapes.medium,backgroundColor = Color.White,
+        Card(shape = MaterialTheme.shapes.medium,
+            colors = CardDefaults.cardColors(
+                containerColor = Color.White,
+            ),
             modifier = Modifier
                 .padding(20.dp)
                 .fillMaxWidth()
@@ -58,7 +71,7 @@ fun LoginScreen(modifier: Modifier = Modifier){
                 },modifier = Modifier.fillMaxWidth(),
                     placeholder = { Text(text = "Email id") },
                     colors = TextFieldDefaults.outlinedTextFieldColors(
-                        focusedBorderColor = Purple500,
+                        focusedBorderColor = Purple80,
                         unfocusedBorderColor = Color.Black,
                         placeholderColor = Color.Gray,
                         textColor = Color.Black
@@ -71,7 +84,7 @@ fun LoginScreen(modifier: Modifier = Modifier){
                     .fillMaxWidth(),placeholder = { Text(text = "Password") },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                     colors = TextFieldDefaults.outlinedTextFieldColors(
-                        focusedBorderColor = Purple500,
+                        focusedBorderColor = Purple80,
                         unfocusedBorderColor = Color.Black,
                         placeholderColor = Color.Gray,
                         textColor = Color.Black
